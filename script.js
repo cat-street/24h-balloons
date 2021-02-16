@@ -236,8 +236,6 @@ const reset = () => {
   balloonTimers.splice(0, balloonTimers.length);
 };
 
-// add wind
-
 const initNewGame = () => {
   setTimer();
   addWind();
