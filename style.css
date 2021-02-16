@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #000;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Photo by Oleg Mitiukhin on Unsplash */
+.sky {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+
+  background-color: steelblue;
+  background: url('./assets/sky.jpg') center center / cover no-repeat;
+
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.player__platform {
+  width: 40px;
+  height: 10px;
+
+  background-color: saddlebrown;
+  border: 2px solid rgb(36, 24, 7);
+}
+
+.player__needle {
+  width: 0;
+  height: 0;
+
+  border: 5px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+.balloon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 400px;
+
+  color: lightcoral;
+}
+
+.balloon__body {
+  height: 100%;
+  position: relative;
+
+  background-color: currentColor;
+
+  border-radius: 50%;
+  border: 2px solid rgb(32, 30, 27);
+
+  box-shadow: inset -4px -4px 2px rgba(0, 0, 0, .3);
+}
+
+.balloon__flare {
+  width: 25%;
+  height: 25%;
+  margin-top: 15%;
+  margin-left: 15%;
+
+  background-color: #fff;
+
+  border-radius: 50%;
+}
+
+.balloon__bottom {
+  width: 20%;
+  height: 7%;
+  margin: 0 auto;
+
+  background-color: currentColor;
+
+  border: 2px solid rgb(68, 22, 22);
+  border-top: 0;
+}
+
+.balloon__rope {
+  width: 2px;
+  height: 50%;
+  margin: 0 auto;
+
+  background-color: rgb(59, 43, 34);
+}
+
+.stats {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+
+  color: #fff;
+  font-family: 'Arial', serif;
+  font-weight: bold;
+}
+
+.stats__timer {
+  text-align: center;
+}
+
+.stats__missed {
+  text-align: right;
+}
+
+.start-button {
+  grid-column-start: 2;
+  margin: 0 auto;
+  padding: 4px 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  border-radius: 10px;
+  border: 0;
+
+  transition: all 200ms ease-out;
+}
+
+.start-button:hover {
+  padding: 5px 10px;
+
+  background-color: crimson;
+  color: #fff;
+}
